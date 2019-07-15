@@ -1,12 +1,12 @@
 <?php
     class Database{
-        public static $host;
-        public static $dbName;
-        public static $username;
-        public static $password;
+        public static $host = "127.0.0.1";
+        public static $dbName = "mvc-shop";
+        public static $username = "root";
+        public static $password = "Ronald@18";
 
         private static function connect(){
-            $pdo = new PDO("mysql:host=".self::$host."; dbname=".self::$dbName."; charset=utf-8", self::$username, self::$password);
+            $pdo = new PDO("mysql:host=".self::$host."; dbname=".self::$dbName."; charset=utf8", self::$username, self::$password);
             $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $pdo;
         }

@@ -3,8 +3,9 @@
         Index::createView("Index");
     });
 
-    Route::set('about-us', function(){
-        AboutUs::createView("AboutUs");
+    Route::set('products', function(){
+        Products::createView('Products');
+        Products::showProducts();
     });
 
     Route::set('contact-us', function(){
